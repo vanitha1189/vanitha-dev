@@ -4,18 +4,20 @@
  
    } */
    
-   function newElement() {
+   function newElement(a, b) {
   // var ul = document.createElement("ul");
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
+  var input = document.getElementById(a);
+  var parentnode = document.getElementById(b);
+  var inputValue = input.value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("myUL").appendChild(li);
+    parentnode.appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  input.value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -55,7 +57,7 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
   }
 }
-
+/*
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -63,4 +65,4 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
-  
+  */
